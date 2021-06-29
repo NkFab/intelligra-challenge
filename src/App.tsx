@@ -1,36 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="uk-flex uk-flex-center uk-flex-middle uk-margin-large-top">
-      <div className="uk-section-muted uk-section-small">
-        <div className="uk-container">
-          <form className="uk-form-stacked">
-            <div className="uk-margin">
-              <label className="uk-form-label">E-mail</label>
-              <div className="uk-inline">
-                <span className="uk-form-icon" uk-icon="icon:mail"></span>
-                <input type="email" className="uk-input" />
-              </div>
-            </div>
-            <div className="uk-margin">
-              <label className="uk-form-label">Password</label>
-              <div className="uk-inline">
-                <span className="uk-form-icon" uk-icon="icon:lock"></span>
-                <input type="password" className="uk-input" />
-              </div>
-            </div>
-            <div>
-              <button className="uk-button-primary uk-button-small uk-width-1-1">
-                Sign-in
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-}
+const Login = React.lazy(() => import('./pages/Login'));
+const Four0Four = React.lazy(() => import('./pages/404'));
+const UsersDetails = React.lazy(() => import('./pages/UsersDetails'));
+const DeviceStore = React.lazy(() => import('./pages/DeviceStore'));
+
+const App: React.FunctionComponent<{}> = () => (
+  <React.Suspense fallback={<div className="uk-flex uk-flex-center uk-flex-middle uk-background-muted uk-height-viewport"><div className="uk-spinner" /></div>}>
+    <Router>
+      <Switch>
+        <Route exact path="/" render={() => <Login />} />
+        <Route path="/user-details" render={() => <UsersDetails />} />
+        <Route path="/device-store" render={() => <DeviceStore />} />
+        <Route exact path="*" render={() => <Four0Four />} />
+      </Switch>
+    </Router>
+  </React.Suspense>
+);
 
 export default App;
