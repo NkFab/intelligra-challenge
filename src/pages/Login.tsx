@@ -2,9 +2,9 @@ import React from 'react';
 import {
   Link, useHistory,
 } from 'react-router-dom';
-import Alert from '../components/Alert';
+import { Alert } from '../components';
 
-const Login: React.FunctionComponent<{}> = () => {
+const Login: React.FunctionComponent<{}> = (): React.ReactElement => {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [showError, setShowError] = React.useState(false);

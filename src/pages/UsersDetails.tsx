@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import Layout from '../components/Layout';
-import Table from '../components/Table';
+import { Layout, Table } from '../components';
 
 const UsersDetails: React.FunctionComponent<{}> = (): React.ReactElement => {
   const history = useHistory();
