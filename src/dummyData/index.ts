@@ -55,4 +55,69 @@ export const devices = [
   },
 ];
 
-export const sortByDevices = ['Name', 'Date Added', 'Year Manufactured'];
+export const sortByDevices = [
+  'Name',
+  'Date Added',
+  'Year Manufactured',
+];
+
+export const sortByUserKYC = [
+  'Name',
+  'Date Added',
+  'Address',
+  'Eligibility',
+];
+
+export const userDetails = [
+  {
+    name: 'Nkaka Manzi',
+    address: 'Kmk, kgl',
+    phone: '0786155871',
+    eligibility: 'Eligible',
+    device: 'iPhone 11',
+  },
+  {
+    name: 'Fab Rice',
+    address: 'Kck, kgl',
+    phone: '0786154871',
+    eligibility: 'In Review',
+    device: 'iPhone X',
+  },
+  {
+    name: 'Lenny Kravitz',
+    address: 'Cal, USA',
+    phone: '0786154812',
+    eligibility: 'Non-Eligible',
+    device: 'iPhone 12',
+  },
+  {
+    name: "Oliver N'Goma",
+    address: 'Ghj, Gbn',
+    phone: '0786154873',
+    eligibility: 'In Review',
+    device: 'Samsung 10',
+  },
+  {
+    name: 'Kool & the Gang',
+    address: 'La, USA',
+    phone: '0786154831',
+    eligibility: 'Eligible',
+    device: 'Samsung Z Fold',
+  },
+  {
+    name: 'Jane Doe',
+    address: 'Ghj, Gbn',
+    phone: '0786154873',
+    eligibility: 'In Review',
+    device: 'Samsung 10',
+  },
+  {
+    name: 'John Doe',
+    address: 'La, USA',
+    phone: '0786154831',
+    eligibility: 'Non-Eligible',
+    device: 'Samsung Z Fold',
+  },
+];
+
+export const userDetailsHeaders = ['Name', 'Address', 'Phone', 'Device', 'Eligibility', ''];
