@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import NotFound from '../assets/images/notFound.svg';
 
-const Four0Four: React.FunctionComponent<{}> = () => {
+const Four0Four: React.FunctionComponent<{}> = (): React.ReactElement => {
   const history = useHistory();
   return (
     <div className="uk-flex uk-flex-center uk-flex-middle uk-height-viewport">

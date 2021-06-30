@@ -6,7 +6,7 @@ const Four0Four = React.lazy(() => import('./pages/404'));
 const UsersDetails = React.lazy(() => import('./pages/UsersDetails'));
 const DeviceStore = React.lazy(() => import('./pages/DeviceStore'));
 
-const App: React.FunctionComponent<{}> = () => (
+const App: React.FunctionComponent<{}> = (): React.ReactElement => (
   <React.Suspense fallback={<div className="uk-flex uk-flex-center uk-flex-middle uk-background-muted uk-height-viewport"><div className="uk-spinner" /></div>}>
     <Router>
       <Switch>
