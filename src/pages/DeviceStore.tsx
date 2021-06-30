@@ -4,9 +4,6 @@ import { sortByDevices, devices } from 'dummyData';
 import {
   Layout, Card, Modal, DropDown,
 } from '../components';
-// const devices = [{
-//   name: '', photo: '', description: '',
-// }];
 
 const DeviceStore: React.FunctionComponent<{}> = (): React.ReactElement => {
   const history = useHistory();

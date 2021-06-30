@@ -13,7 +13,7 @@ const Layout: React.FunctionComponent<Props> = ({
 }: Props): React.ReactElement => (
   <>
     <div
-      uk-sticky
+      data-uk-sticky
       className="uk-navbar-container tm-navbar-container uk-active uk-light"
     >
       <div className="uk-container uk-container-expand">
@@ -21,8 +21,8 @@ const Layout: React.FunctionComponent<Props> = ({
           <nav
             id="navbar"
             className="uk-navbar-container"
-            uk-navbar="mode: click"
-            uk-sticky="animation: uk-animation-slide-top; show-on-up: true"
+            data-uk-navbar="mode: click"
+            data-uk-sticky="animation: uk-animation-slide-top; show-on-up: true"
           >
             <div className="uk-navbar-left nav-overlay">
               <a href="/#" className="uk-navbar-item uk-logo uk-margin-left">
@@ -44,9 +44,9 @@ const Layout: React.FunctionComponent<Props> = ({
                     {' '}
                     <span
                       className="uk-navbar-toggle uk-margin-right"
-                      uk-navbar-toggle-icon
-                      uk-toggle="target: #mobile-navbar"
-                      uk-icon="icon: menu"
+                      data-uk-navbar-toggle-icon
+                      data-uk-toggle="target: #mobile-navbar"
+                      data-uk-icon="icon: menu"
                       style={{ cursor: 'pointer' }}
                     >
                       &nbsp;
@@ -56,17 +56,16 @@ const Layout: React.FunctionComponent<Props> = ({
               </div>
             </div>
           </nav>
-          <div id="mobile-navbar" uk-offcanvas="mode: slide; flip:false">
+          <div id="mobile-navbar" data-uk-offcanvas="mode: slide; flip:false">
             <div className="uk-offcanvas-bar uk-background-primary">
               <span
                 className="uk-offcanvas-close"
-                uk-icon="icon: close"
-                uk-close
+                data-uk-close
                 style={{ cursor: 'pointer' }}
               >
                 &nbsp;
               </span>
-              <ul className="uk-nav-default uk-nav-parent-icon uk-list" uk-nav>
+              <ul className="uk-nav-default uk-nav-parent-icon uk-list" data-uk-nav>
                 <li>
                   <h3>Intelligra</h3>
                 </li>
@@ -100,21 +99,22 @@ const Layout: React.FunctionComponent<Props> = ({
                   <br />
                 </div>
                 <hr className="uk-divider-icon" />
-                {/* <ul className="uk-nav uk-nav-default"> */}
 
                 <li className="uk-nav-header">devices</li>
                 <li>
-                  <Link to="buttons.html">Store</Link>
+                  <Link to="/device-store">Store</Link>
                 </li>
 
                 <li className="uk-nav-header">users</li>
                 <li>
-                  <Link to="login.html">Details</Link>
+                  <Link to="/user-details">Details</Link>
                 </li>
                 <li>
-                  <Link to="register.html">Financing</Link>
+                  <Link to="/user-details">Financing</Link>
                 </li>
-                {/* </ul> */}
+                <li>
+                  <Link to="/user-details">Add User&apos;s KYCs</Link>
+                </li>
                 <li>
                   <a href="#home">LOGOUT</a>
                 </li>
@@ -159,6 +159,12 @@ const Layout: React.FunctionComponent<Props> = ({
         <li>
           <Link to="/user-details">Details</Link>
         </li>
+        <li>
+          <Link to="/user-details">Financing</Link>
+        </li>
+        <li>
+          <Link to="/user-details">Add User&apos;s KYCs</Link>
+        </li>
       </ul>
     </div>
     <div className="content-padder content-background">
@@ -176,7 +182,7 @@ const Layout: React.FunctionComponent<Props> = ({
               {location
                 .split('-')
                 .slice(1)
-                .map((e) => <span style={{ marginRight: '2px' }}>{e}</span>)}
+                .map((e) => <span key={e} style={{ marginRight: '2px' }}>{e}</span>)}
             </span>
           </small>
         </div>

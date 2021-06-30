@@ -14,6 +14,9 @@ const Modal: React.FunctionComponent<Props> = ({ title, children }: Props): Reac
     data-uk-modal
   >
     <div className="uk-modal-dialog uk-modal-body">
+      <button className="uk-modal-close-default" type="button" data-uk-close>
+      &nbsp;
+      </button>
       <h2 className="uk-modal-title">{title}</h2>
       {children}
     </div>
